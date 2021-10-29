@@ -1,0 +1,26 @@
+
+<h1 class="display-1">Here's your books!</h1>
+<ng-container  *ngFor="let Book of theBooks" >
+    <app-book [theBook]="Book"></app-book>
+</ng-container>
+
+
+
+<h2 class="display-4">Add a book to the library: </h2>
+<div class="row g-3">
+    <div class="col">
+    <label>Title:</label> <input type= "text" [(ngModel)]="newBookTitle" class="form-control">
+    </div>
+
+    <div class="col">
+    <label>Author:</label> <input type= "text" [(ngModel)]="newBookAuthor" class="form-control">
+    </div>
+
+    <div class="col">
+    <label>Date Published:</label><input type= "text" [(ngModel)]="newPublicationYear"  class="form-control"> 
+    </div>
+    <button (click)="addBook()">Add</button>
+   
+
+
+</div>
